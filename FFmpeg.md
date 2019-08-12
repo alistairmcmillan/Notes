@@ -1,4 +1,4 @@
-# FFmpeg notes
+# FFmpeg Notes
 
 ## How to make an MP4 from a series of PNGs
 
