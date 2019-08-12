@@ -1,5 +1,4 @@
-# GitHub Notes
-Things I'm always forgetting and having to look up
+# Git Notes
 
 ## How to update a forked repository
 
