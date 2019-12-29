@@ -16,3 +16,12 @@ From Terminal...
 ## How to force push to wipe out remote changes
 
 - `git push -f <remote> <branch>`
+
+## How to update submodules
+
+- `cd submodule_name`
+- `git checkout master`
+- `git pull`
+- ` cd ..`
+- `git add submodule_name`
+- `git commit -m "updating submodule to latest"`
