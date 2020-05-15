@@ -8,7 +8,7 @@ From Terminal...
 
 ## List installed packages with version
 
-- `npm list --depth=0`
+- `npm list -g --depth=0`
 
 ## Check for out of date packages
 
