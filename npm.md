@@ -4,7 +4,7 @@
 
 From Terminal...
 
-- `npm instal npm@latest -g`
+- `npm install npm@latest -g`
 
 ## List installed packages with version
 
