@@ -6,3 +6,6 @@ apt list --upgradeable
 
 # List systemctl timers
 systemctl list-timers
+
+# Add firewall rules for Apache
+ufw allow 'Apache Secure'
