@@ -1,8 +1,13 @@
 # Restart services
 systemctl restart sshd
 
-# List packages that need upgrading
+# Updating installed software
+apt update
 apt list --upgradeable
+apt upgrade
+
+# Updating snap packages
+sudo snap refresh --list
 
 # List systemctl timers
 systemctl list-timers
