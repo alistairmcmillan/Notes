@@ -8,5 +8,5 @@
     -pattern_type to set input name matching (set to glob because filenames aren't sequential)
     -c:v to set video codec
     -vf to set output framerate (not really necessary unless different from input framerate)
-    -pix_fmt to set pixelformat (set to yuv420p so [ensure compatibility so crappy players can decode the video](https://trac.ffmpeg.org/wiki/Slideshow))
+    -pix_fmt to set pixelformat (set to yuv420p so <a href="https://trac.ffmpeg.org/wiki/Slideshow">ensure compatibility so crappy players can decode the video</a>
     
