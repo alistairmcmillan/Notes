@@ -9,3 +9,7 @@
     -c:v          to set video codec
     -vf           to set output framerate (not really necessary unless different from input framerate)
     -pix_fmt      to set pixelformat (set to yuv420p to "ensure compatibility so crappy players can decode the video")
+
+## Export a single frame from a video
+
+    ffmpeg -ss 01:23:45 -i video.mp4 -vframes 1 -q:v 2 output.png
