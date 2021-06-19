@@ -27,4 +27,4 @@
     - ss              the start of the desired clip in HH:MM:SS format
     - to              the end of the desrired clip in HH:MM:SS format
     - c:v copy        tell ffmpeg not to reencode the video, just copy it straight across
-    - c:s mov_text    tells ffmpeg to copy the subtitle track and encode it in "mov_text" format which works in QuickTime and VLC
+    - c:s mov_text    tell ffmpeg to copy the subtitle track and encode it in "mov_text" format which works in QuickTime and VLC
