@@ -30,3 +30,16 @@
 ## How to extract subtitle track to file
 
     fmpeg -i input.mp4 -map 0:s:0 subtitles.srt
+
+## Concatentating multiple videos into one
+
+Create a file called `list.txt` that lists all the files you want to concatenate with contents looking like this.
+
+    file 'animation4 one paddle/output.mp4'
+    file 'animation5 two paddles/output.mp4'
+    file 'animation6 four paddles/output.mp4'
+    file 'animation8 eight paddles/output.mp4'
+
+Then run the following command to concatenate them.
+
+    ffmpeg -f concat -safe 0 -i list.txt -c copy output.mp4
