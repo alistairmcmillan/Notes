@@ -29,7 +29,7 @@
 
 ## How to extract subtitle track to file
 
-    fmpeg -i input.mp4 -map 0:s:0 subtitles.srt
+    ffmpeg -i input.mp4 -map 0:s:0 subtitles.srt
 
 ## Concatentating multiple videos into one
 
