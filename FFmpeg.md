@@ -43,3 +43,7 @@ Create a file called `list.txt` that lists all the files you want to concatenate
 Then run the following command to concatenate them.
 
     ffmpeg -f concat -safe 0 -i list.txt -c copy output.mp4
+
+## Extend the last frame of the video for X seconds
+
+    ffmpeg -i input.mp4 -vf tpad=stop_mode=clone:stop_duration=2 output.mp4
