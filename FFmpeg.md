@@ -10,7 +10,7 @@
     -vf              to set output framerate (not really necessary unless different from input framerate)
     -pix_fmt         to set pixelformat (set to yuv420p to "ensure compatibility so crappy players can decode the video")
 
-## Export a single frame from a video
+## How to export a single frame from a video
 
     ffmpeg -i video.mp4 -ss 01:23:45 -vframes 1 -q:v 2 output.png
     
@@ -31,7 +31,7 @@
 
     ffmpeg -i input.mp4 -map 0:s:0 subtitles.srt
 
-## Concatentating multiple videos into one
+## How to concatentate multiple videos into one
 
 Create a file called `list.txt` that lists all the files you want to concatenate with contents looking like this.
 
@@ -44,6 +44,10 @@ Then run the following command to concatenate them.
 
     ffmpeg -f concat -safe 0 -i list.txt -c copy output.mp4
 
-## Extend the last frame of the video for X seconds
+## How to extend the last frame of the video for X seconds
 
     ffmpeg -i input.mp4 -vf tpad=stop_mode=clone:stop_duration=2 output.mp4
+
+## How to reverse a video
+
+    ffmpeg -i input.mp4 -vf reverse output.mp4
