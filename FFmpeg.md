@@ -51,3 +51,7 @@ Then run the following command to concatenate them.
 ## How to reverse a video
 
     ffmpeg -i input.mp4 -vf reverse output.mp4
+
+## How to convert a bunch of files
+
+    for i in *.avi; do ffmpeg -i "$i" "${i%.*}.mp4"; done
