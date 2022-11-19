@@ -55,3 +55,7 @@ Then run the following command to concatenate them.
 ## How to convert a bunch of files
 
     for i in *.avi; do ffmpeg -i "$i" "${i%.*}.mp4"; done
+
+## How to extract audio track from MP4 file
+
+    ffmpeg -i source.mp4 -vn -acodec copy output.aac
