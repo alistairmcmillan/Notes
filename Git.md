@@ -25,3 +25,7 @@ From Terminal...
 - ` cd ..`
 - `git add submodule_name`
 - `git commit -m "updating submodule to latest"`
+
+## How to remove a remote
+
+- `git remote remove REMOTENAME`
