@@ -23,3 +23,7 @@
 ## Get a list of AD Domain Controllers hostnames
 
     ForEach ($dc in Get-ADDomainController -Filter {Name -like "*"}) { $dc.HostName }
+
+## Retrieve web content and save to a file
+
+    Invoke-WebRequest https://api.github.com/users/alistairmcmillan -OutputFile response.json
