@@ -56,6 +56,15 @@ Then run the following command to concatenate them.
 
     for i in *.avi; do ffmpeg -i "$i" "${i%.*}.mp4"; done
 
+## How to crop video to a specfic resolution
+
+    ffmpeg -i input.mp4 -filter:v "crop=width:height:x:y" output.mp4
+
+    - width     target width of output video
+    - height    target height of ouptut video
+    - x         x coordinate to start crop within input video
+    - y         y coordinate to start crop within input video
+
 ## How to extract audio track from MP4 file
 
     ffmpeg -i source.mp4 -vn -acodec copy output.aac
