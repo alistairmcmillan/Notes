@@ -52,9 +52,10 @@ Then run the following command to concatenate them.
 
     ffmpeg -i input.mp4 -vf reverse output.mp4
 
-## How to convert a bunch of files
+## How to operate on a bunch of files
 
     for i in *.avi; do ffmpeg -i "$i" "${i%.*}.mp4"; done
+    for i in input-0*.mp4; do ffmpeg -i "$i" -filter:v 'setpts=0.03*PTS' "${i%.*}-faster.mp4"; done
 
 ## How to extract audio track from MP4 file
 
