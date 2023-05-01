@@ -78,3 +78,7 @@ Then run the following command to concatenate them.
     - setpts    an expression to change presentation timestemp (PTS) of each frame
 
     Note: this process speeds up the output video by dropping frame
+
+## How to add overlay text to a video
+
+    ffmpeg -i input.mp4 -vf "drawtext=fontfile=/System/Library/Fonts/Helvetica.ttc:text='Hello World':fontcolor=white:fontsize=24:box=1:boxcolor=black@0.5:boxborderw=5:x=(w-text_w)/2:y=(h-text_h)" -codec:a copy output.mp4
