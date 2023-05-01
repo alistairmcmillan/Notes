@@ -69,3 +69,10 @@ Then run the following command to concatenate them.
     - x         x coordinate to start crop within input video
     - y         y coordinate to start crop within input video
 
+## How to speed up video
+
+    ffmpeg -i input.mp4 -filter:v "setpts=0.5*PTS" output.mp4
+
+    - setpts    an expression to change presentation timestemp (PTS) of each frame
+
+    Note: this process speeds up the output video by dropping frame
