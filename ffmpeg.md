@@ -56,6 +56,7 @@ Then run the following command to concatenate them.
 
     for i in *.avi; do ffmpeg -i "$i" "${i%.*}.mp4"; done
     for i in input-0*.mp4; do ffmpeg -i "$i" -filter:v 'setpts=0.03*PTS' "${i%.*}-faster.mp4"; done
+    for i in input-0*.mp4; do ffmpeg -i "$i" -vf "drawtext=fontfile=/System/Library/Fonts/Helvetica.ttc:text='${i%.*}':fontcolor=white:fontsize=35:box=1:boxcolor=black@0.5:boxborderw=5:x=(w-text_w)/2:y=(h-text_h)" -codec:a copy "${i%.*}-text.mp4"; done
 
 ## How to extract audio track from MP4 file
 
