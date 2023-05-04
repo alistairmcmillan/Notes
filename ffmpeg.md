@@ -62,6 +62,15 @@ Then run the following command to concatenate them.
 
     ffmpeg -i source.mp4 -vn -acodec copy output.aac
 
+## How to import audo track into MP4 file
+
+    ffmpeg -i input.mp4 -i output.aac -map 0 -map 1:a -c:v copy -shortest output.mp4
+
+    - map 0      takes everything from input 0, the input.mp4 file
+    - map 1:a    takes only the audio track from the output.aac file
+    - c:v copy   tells ffmpeg to just copy the video input, don't bother reencoding it
+    - shortest   tells ffmpeg to make the output.mp4 file the same length as the shortest input
+
 ## How to crop video to a specfic resolution
 
     ffmpeg -i input.mp4 -filter:v "crop=width:height:x:y" output.mp4
