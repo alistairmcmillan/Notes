@@ -62,7 +62,7 @@ Then run the following command to concatenate them.
 
     ffmpeg -i source.mp4 -vn -acodec copy output.aac
 
-## How to import audo track into MP4 file
+## How to import audo track into MP4 file
 
     ffmpeg -i input.mp4 -i output.aac -map 0 -map 1:a -c:v copy -shortest output.mp4
 
