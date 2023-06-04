@@ -91,3 +91,6 @@ Then run the following command to concatenate them.
 ## How to add overlay text to a video
 
     ffmpeg -i input.mp4 -vf "drawtext=fontfile=/System/Library/Fonts/Helvetica.ttc:text='Hello World':fontcolor=white:fontsize=24:box=1:boxcolor=black@0.5:boxborderw=5:x=(w-text_w)/2:y=(h-text_h)" -codec:a copy output.mp4
+
+    ffmpeg -r 5 -pattern_type glob -export_path_metadata 1 -i '2023-06-03*.jpg' -c:v libx264 -pix_fmt yuv420p -vf "drawtext=text='%{metadata\:lavf.image2dec.source_basename\:fuck}':fontcolor=white:fontsize=24:box=1:boxcolor=black@0.5:boxborderw=5:x=(w-text_w-60)/2:y=h-text_h" output.mp4
+
