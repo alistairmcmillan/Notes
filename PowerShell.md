@@ -27,3 +27,15 @@
 ## Retrieve web content and save to a file
 
     Invoke-WebRequest https://api.github.com/users/alistairmcmillan -OutputFile response.json
+
+## Search a folder for names containing a particular string, within a date range
+
+    $startDate = Get-Date -Date "2023-02-27 00:00:00Z"
+    $endDate = Get-Date -Date "2023-02-28 00:00:00Z"
+    $searchTerm = "gram"
+
+    Get-ChildItem . -Recurse | Where-Object {
+        $_.LastWriteTime -gt $startDate -and 
+        $_.LastWriteTime -lt $endDate -and
+        $_.name -like "*$searchTerm*" 
+    }
