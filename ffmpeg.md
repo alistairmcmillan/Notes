@@ -111,3 +111,14 @@ Then run the following command to concatenate them.
              [6:v]  [7:v]  [8:v]  hstack=inputs=3 [row3]; \
              [row1] [row2] [row3] vstack=inputs=3 [out]" \
         -map "[out]" grid.mp4
+
+## Add border around video
+
+    ffmpeg -i input.mp4 -filter_complex "[0]pad=w=100+iw:h=50+ih:x=50:y=25:color=black;" output.mp4
+
+    - 'w=100+iw' take the initial width and add 100 pixels
+    - 'h=50+iw' take the initial height and add 50 pixels
+    - 'x=50:y=25' place the original video at 50, 25 coordinates
+    - 'color=black' the color of the border
+
+    
