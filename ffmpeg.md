@@ -93,3 +93,21 @@ Then run the following command to concatenate them.
 
     ffmpeg -r 5 -pattern_type glob -export_path_metadata 1 -i '2023-06-03*.jpg' -c:v libx264 -pix_fmt yuv420p -vf "drawtext=text='%{metadata\:lavf.image2dec.source_basename\:fuck}':fontcolor=white:fontsize=24:box=1:boxcolor=black@0.5:boxborderw=5:x=(w-text_w-60)/2:y=h-text_h" output.mp4
 
+## Combine nine videos into a single grid video
+
+    ffmpeg \
+        -i one.mp4 \
+        -i two.mp4 \
+        -i three.mp4 \
+        -i four.mp4 \
+        -i five.mp4 \
+        -i six.mp4 \
+        -i seven.mp4 \
+        -i eight.mp4 \
+        -i nine.mp4 \
+        -filter_complex \
+            "[0:v]  [1:v]  [2:v]  hstack=inputs=3 [row1]; \
+             [3:v]  [4:v]  [5:v]  hstack=inputs=3 [row2]; \
+             [6:v]  [7:v]  [8:v]  hstack=inputs=3 [row3]; \
+             [row1] [row2] [row3] vstack=inputs=3 [out]" \
+        -map "[out]" grid.mp4
