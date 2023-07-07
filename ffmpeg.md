@@ -121,4 +121,10 @@ Then run the following command to concatenate them.
     - 'x=50:y=25' place the original video at 50, 25 coordinates
     - 'color=black' the color of the border
 
-    
+## Add x seconds of white frames to the end of a video
+
+    ffmpeg -f lavfi -i color=c=white:s=1280x720:r=30:d=60 white.mp4
+
+    - to create a 60 seconds video of 1280 x 720 white running at 30 frames per second
+
+    Then use the concat method above to join the the white video to the beginning or end of the original video
