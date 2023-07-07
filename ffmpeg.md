@@ -127,4 +127,4 @@ Then run the following command to concatenate them.
 
     - to create a 60 seconds video of 1280 x 720 white running at 30 frames per second
 
-    Then use the concat method above to join the the white video to the beginning or end of the original video
+    Then use the concat method above to join the white video to the beginning or end of the original video
