@@ -2,9 +2,9 @@
 systemctl restart sshd
 
 # Updating installed software
-apt update
-apt list --upgradeable
-apt upgrade
+- apt update
+- apt list --upgradeable
+- apt upgrade
 
 # Updating snap packages
 sudo snap refresh --list
