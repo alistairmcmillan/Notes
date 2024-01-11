@@ -131,7 +131,7 @@ Then run the following command to concatenate them.
 
 ## Pan across existing video clip
 
-    ffmpeg -i input.mp4 -vf "crop=in_w*0.56:in_h*1.0:(in_w*0.025)*t:0" DJI_0459_3.mp4
+    ffmpeg -i input.mp4 -vf "crop=in_w*0.56:in_h*1.0:(in_w*0.025)*t:0" output.mp4
 
     - 'in_w*0.56' sets the start width to 56% of the original width
     - 'in_h*1.0' sets the start height to 100% of the original height
