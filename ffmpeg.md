@@ -128,3 +128,16 @@ Then run the following command to concatenate them.
     - to create a 60 seconds video of 1280 x 720 white running at 30 frames per second
 
     Then use the concat method above to join the white video to the beginning or end of the original video
+
+## Pan across existing video clip
+
+    ffmpeg -i input.mp4 -vf "crop=in_w*0.56:in_h*1.0:(in_w*0.025)*t:0" DJI_0459_3.mp4
+
+    - 'in_w*0.56' sets the start width to 56% of the original width
+    - 'in_h*1.0' sets the start height to 100% of the original height
+    - '(in_w*0.025)*t' sets the start horizontal position to (2.5% of the original width) multiplied by the timestamp
+    - '0' keeps the start vertical position to 0
+
+    The aim of this being to create a square video panning left to right across a 20 second 3840*2160 video
+
+        
