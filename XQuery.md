@@ -21,4 +21,14 @@
                     </tr>
         }
         </table>
-        
+
+## Count of the files in a collection
+
+    let $path := '/db/datasets/myapp/data'
+    return count(xmldb:xcollection($path))
+
+## Deleting all the files in a collection
+
+    let $path := '/db/datasets/myapp/data'
+    for $a in xmldb:xcollection($path)
+        return xmldb:remove($path, util:document($a))
