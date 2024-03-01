@@ -26,7 +26,7 @@
 
 ## Retrieve web content and save to a file
 
-    Invoke-WebRequest https://api.github.com/users/alistairmcmillan -OutputFile response.json
+    Invoke-WebRequest https://api.github.com/users/alistairmcmillan -OutFile response.json
 
 ## Search a folder for names containing a particular string, within a date range
 
