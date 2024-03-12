@@ -32,3 +32,18 @@
     let $path := '/db/datasets/myapp/data'
     for $a in xmldb:xcollection($path)
         return xmldb:remove($path, util:document($a))
+
+## Casting string to integer
+
+    xquery version "3.1";
+
+    let $originalValue := <dude>1234567890</dude>
+    let $castValue := xs:integer($originalValue)
+
+    let $testWithout := format-number($originalValue, '0000000')
+    let $testWith := format-number($castValue, '0000000')
+
+    return (
+        $testWithout,
+        $testWith
+    )
