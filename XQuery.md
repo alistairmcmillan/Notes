@@ -47,3 +47,15 @@
         $testWithout,
         $testWith
     )
+
+## Using substring
+
+    xquery version "3.1";
+
+    let $originalValue := <dude>1234567890</dude>
+    let $testSubstring := substring($originalValue, 4, 3)
+
+    return (
+        $originalValue,
+        $testSubstring
+    )
