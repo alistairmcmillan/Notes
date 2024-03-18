@@ -31,7 +31,7 @@
 
     let $path := '/db/datasets/myapp/data'
     for $a in xmldb:xcollection($path)
-        return xmldb:remove($path, util:document($a))
+        return xmldb:remove($path, util:document-name($a))
 
 ## Casting string to integer
 
