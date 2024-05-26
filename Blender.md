@@ -1,3 +1,7 @@
+# How to change the y coord of multiple objects at once
+
+Hold down ALT (Win) or Option (Mac) before clicking into the coord input box
+
 # How to stabilise one axis of a video
 
 1. Click Editor button in top-left and change to "Movie Clip Editor"
