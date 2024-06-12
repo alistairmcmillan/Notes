@@ -59,3 +59,30 @@
         $originalValue,
         $testSubstring
     )
+
+## Remove duplicates
+
+    xquery version "3.1";
+
+    let $i := <dudes>
+        <character>
+            <first>Anakin</first>
+            <last>Skywalker</last>
+            <allegiance>Republic</allegiance>
+        </character>
+        <character>
+            <first>Luke</first>
+            <last>Skywalker</last>
+            <allegiance>Rebel</allegiance>
+        </character>
+        <character>
+            <first>Anakin</first>
+            <last>Skywalker</last>
+            <allegiance>Republic</allegiance>
+        </character>
+    </dudes>
+    
+    let $s := $i//*:character
+    for $a in $s
+        group by $factor := $a/first, $pa := $a/last, $pr := $a/allegiance
+        return $a[1]
