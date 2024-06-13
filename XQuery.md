@@ -60,7 +60,7 @@
         $testSubstring
     )
 
-## Remove duplicates
+## Remove duplicates method #1
 
     xquery version "3.1";
 
@@ -86,3 +86,31 @@
     for $a in $s
         group by $factor := $a/first, $pa := $a/last, $pr := $a/allegiance
         return $a[1]
+
+## Remove duplicates method #2
+
+    xquery version "3.1";
+
+    let $i := <dudes>
+        <character>
+            <first>Anakin</first>
+            <last>Skywalker</last>
+            <allegiance>Republic</allegiance>
+        </character>
+        <character>
+            <first>Luke</first>
+            <last>Skywalker</last>
+            <allegiance>Rebel</allegiance>
+        </character>
+        <character>
+            <first>Anakin</first>
+            <last>Skywalker</last>
+            <allegiance>Republic</allegiance>
+        </character>
+    </dudes>
+
+    for $x in $i//*:character
+    return
+        if ($x is ($i//*:character)[. = $x][1]) then
+            $x
+        else ()
