@@ -114,3 +114,5 @@
         if ($x is ($i//*:character)[. = $x][1]) then
             $x
         else ()
+
+Source: https://www.sqlservercentral.com/blogs/using-xquery-to-remove-duplicate-values-or-duplicate-nodes-from-an-xml-instance
