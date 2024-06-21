@@ -86,7 +86,11 @@ Then run the following command to concatenate them.
 
     - setpts    an expression to change presentation timestemp (PTS) of each frame
 
-    Note: this process speeds up the output video by dropping frame
+    Note: this process speeds up the output video by dropping frames
+
+## How to speed up video and audio
+
+    ffmpeg -i input.mp4 -filter_complex "[0:v]setpts=0.25*PTS[v];[0:a]atempo=4.0[a]" -map "[v]" -map "[a]" output.mp4
 
 ## How to add overlay text to a video
 
