@@ -145,4 +145,7 @@ Then run the following command to concatenate them.
 
     The aim of this being to create a square video panning left to right across a 20 second 3840*2160 video
 
-        
+## Changing frame rate of a video
+
+    ffmpeg -i input.mp4 -filter:v fps=30 output.mp4
+
