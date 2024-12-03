@@ -16,10 +16,18 @@
     - ss         the start of the desired clip in HH:MM:SS format
     - vframes    the number of frames to output
     - q:v 2      the quality of the output
-    
+
+## How to trim a video
+
+    ffmpeg -ss 00:00:10 -to 00:00:50 -i input.mp4 -c copy output.mp4
+
+    - ss         the start of the desired clip in HH:MM:SS format
+    - to         the end of the desrired clip in HH:MM:SS format
+    - c copy     tell ffmpeg not to reencode the audio & video, just copy them straight across
+
 ## How to trim a video while maintaining subtitle track
 
-    ffmpeg -i input.mp4 -ss 00:00:30 -to 00:00:40 -c:v copy -c:s mov_text output.mp4
+    ffmpeg -ss 00:00:30 -to 00:00:40 -i input.mp4 -c:v copy -c:s mov_text output.mp4
     
     - ss              the start of the desired clip in HH:MM:SS format
     - to              the end of the desrired clip in HH:MM:SS format
