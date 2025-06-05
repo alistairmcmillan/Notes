@@ -94,7 +94,7 @@ Then run the following command to concatenate them.
 
     - setpts    an expression to change presentation timestemp (PTS) of each frame
 
-    Note: this process speeds up the output video by dropping frames
+    Note: this process just changes the presentation timestamp (PTS) for each frame i.e. how much time the frame is displayed for
 
 ## How to speed up video and audio
 
