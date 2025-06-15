@@ -120,6 +120,8 @@ Speed up video and audio by twelve times.
 
     ffmpeg -r 10 -pattern_type glob -export_path_metadata 1 -i '2024*.jpg' -c:v libx264 -pix_fmt yuv420p -vf "drawtext=text='%metadata\:lavf.image2dec.source_basename\:fuck}':fontcolor=white:fontsize=50:box=1:boxcolor=black@0.5:boxborderw=5:x=(w-text_w+20)/2:y=10" short.mp4
 
+    ffmpeg -i 20250615\ 1023.mp4 -vf "drawtext=fontfile=/System/Library/Fonts/Helvetica.ttc:text='15 Jun 2025 10\:23':fontcolor=white:fontsize=150:box=1:boxcolor=black@0.5:boxborderw=25:x=(w-text_w)/2:y=(h-text_h-150)" -codec:a copy 20250615\ 1023\ caption.mp4
+
 ## Combine nine videos into a single grid video
 
     ffmpeg \
