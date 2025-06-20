@@ -1,3 +1,10 @@
+# How to render from command line
+
+    "C:\Program Files\Blender Foundation\Blender 4.4\blender.exe" -b "scene.blend" -a
+
+    -a render animation
+    -b run in background (no GUI)
+
 # How to change the y coord of multiple objects at once
 
 Hold down ALT (Win) or Option (Mac) before clicking into the coord input box
