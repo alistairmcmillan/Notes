@@ -1,5 +1,15 @@
 # PowerShell Notes
 
+## Get list of active sessions on device
+
+    quser /server:desktop-ncc17017d
+
+    qwinsta /server:desktop-ncc17017d
+
+## End session on remote device
+
+    logoff 11 /server:desktop-ncc17017d
+
 ## Get distinguished name for a specific AD computer
 
     (Get-ADComputer desktop-ncc1701d).DistinguishedName
