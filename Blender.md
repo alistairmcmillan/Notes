@@ -9,6 +9,15 @@
 
 Hold down ALT (Win) or Option (Mac) before clicking into the coord input box
 
+# How to speed up renders
+
+* Turn on OptiX rendering (if you have a GTX graphics card)
+* Set Render - Noise Threshold - Max Samples to 500
+* Turn on Final Render - Persistent Data
+* Change Denoiser to Optix (if you have a GTX graphics card)
+
+Source: https://www.youtube.com/watch?v=kYOsR9Kb8Ek
+
 # How to stabilise one axis of a video
 
 1. Click Editor button in top-left and change to "Movie Clip Editor"
