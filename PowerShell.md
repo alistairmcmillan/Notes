@@ -22,6 +22,14 @@
 
     Get-ADComputer desktop-ncc1701d -Properties *
 
+## Get all properties for a specific AD group
+
+    Get-ADGroup DM-U-ncc1701D-BridgeShiftA -properties *
+
+## Get description for a specific AD group
+    
+    Get-ADGroup DM-U-ncc1701D-Engineering -properties description
+
 ## Get a sorted list of groups for a specific AD user
 
     ForEach ($group in Get-ADPrincipalGroupMembership (Get-ADUser picardjp).DistinguishedName | Sort-Object -Property Name) { $group.name }
